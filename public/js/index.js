@@ -99,5 +99,5 @@ var handleDeleteBtnClick = function() {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 $mapdivcordinates.on("click",function(event){
-  console.log(event);
+  console.log("X = "+event.originalEvent.offsetX +" Y = "+event.originalEvent.offsetX);
 });
