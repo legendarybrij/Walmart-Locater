@@ -2,7 +2,7 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
-var db = require("./models");
+var db = require("./models");// the db is a variable here as opposed to a separate folder and it contains the model
 
 var app = express();
 var PORT = process.env.PORT || 3000;

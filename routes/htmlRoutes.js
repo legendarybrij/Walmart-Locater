@@ -2,6 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
+  //this get will be specific to users table when they log in so that we pull t
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {

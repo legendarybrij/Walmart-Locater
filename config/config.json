@@ -1,20 +1,23 @@
 {
   "development": {
+    "port":8889,
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "root",
+    "database": "userdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
+    "port":8889,
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "root",
+    "database": "userdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
+    "port":8889,
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
