@@ -3,6 +3,7 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var $mapdivcordinates = $(".map");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -97,3 +98,6 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+$mapdivcordinates.on("click",function(event){
+  console.log("X = "+event.originalEvent.offsetX +" Y = "+event.originalEvent.offsetY);
+});

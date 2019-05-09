@@ -1,3 +1,22 @@
+html, body {
+height:1900px;;
+}
+
 .list-group-item {
   line-height: 2.5;
+}
+
+.map{
+  position: static fixed;
+  z-index: 0;
+  widows: 100%;
+  
+}
+
+.pin1{
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+  left: 669px; 
+  top: 329px;
 }
