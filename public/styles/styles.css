@@ -1,22 +1,48 @@
-html, body {
-height:1900px;;
+/*--------------------------- Responsive guide ----------------------*/
+
+/* Medium Layout: 1280px */
+
+/* Tablet Layout: 768px */
+
+/* Mobile Layout: 320px */
+
+/* Wide Mobile Layout: 480px */
+
+/* =================================== */
+
+/*  Main
+/* =================================== */
+
+body {
+  background-color: blue;
+  font-size: 18px;
 }
 
 .list-group-item {
   line-height: 2.5;
 }
 
-.map{
+.map {
   position: static fixed;
   z-index: 0;
   widows: 100%;
-  
 }
 
-.pin1{
+.pin1 {
   position: absolute;
   z-index: 1;
   width: 20px;
-  left: 669px; 
+  left: 669px;
   top: 329px;
+}
+
+/*--------------------------------------------------------------
+# Top Nav Bar
+--------------------------------------------------------------*/
+
+.logoImage {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;
+  display: block;
 }
