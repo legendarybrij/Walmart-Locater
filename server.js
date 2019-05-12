@@ -18,20 +18,30 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 // For Handlebars
-app.set('views', './views')
-app.engine('hbs', exphbs({ extname: '.hbs' }));
-app.set('view engine', '.hbs');
-app.get('/', function (req, res) {
-  res.send('Hello!');
-});
+// app.set('view engine', 'handlebars')
+// app.engine('hbs', exphbs({ extname: '.hbs' }));
+// app.set('view engine', '.hbs');
+// app.get('/', function (req, res) {
+//   res.send('Hello!');
+// });
+
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main"
+  })
+);
+app.set("view engine", "handlebars");
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+app.use(express.static("./public"));
 
 // Models
 var models = require("./models");
 
 // Routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 var authRoute = require('./routes/auth.js')(app, passport);
 
 // Load passport strategies

@@ -1,27 +1,43 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+  app.get("/", function (req, res) {
+    db.models.findAll({}).then(function (Sequelize) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        examples: Sequelize
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  // Load dashboard page
+  // app.get("/", function (req, res) {
+  //   db.db.findAll({}).then(function (Sequelize) {
+  //     res.render("dashboard", {
+  //       msg: "Welcome!",
+  //       Sequelize: Sequelize
+  //     });
+  //   });
+  // });
+
+  // Routing sign up
+  app.get("/signup", function (req, res) {
+    res.render("signup");
+  });
+
+  // Routing sign in
+  app.get("/signin", function (req, res) {
+    res.render("signin");
+  });
+
+  // Routing log out
+  app.get("/", function (req, res) {
+    res.render("logout");
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
