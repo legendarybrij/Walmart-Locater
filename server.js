@@ -18,13 +18,6 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 // For Handlebars
-// app.set('view engine', 'handlebars')
-// app.engine('hbs', exphbs({ extname: '.hbs' }));
-// app.set('view engine', '.hbs');
-// app.get('/', function (req, res) {
-//   res.send('Hello!');
-// });
-
 app.engine(
   "handlebars",
   exphbs({

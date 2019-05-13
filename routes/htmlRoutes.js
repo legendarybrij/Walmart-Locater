@@ -2,8 +2,8 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+  app.get("/", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
       res.render("index", {
         msg: "Welcome!",
         examples: dbExamples
@@ -12,14 +12,14 @@ module.exports = function (app) {
   });
 
   // Load dashboard page
-  // app.get("/", function (req, res) {
-  //   db.db.findAll({}).then(function (Sequelize) {
-  //     res.render("dashboard", {
-  //       msg: "Welcome!",
-  //       Sequelize: Sequelize
-  //     });
-  //   });
-  // });
+  app.get("/dashboard", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
+      res.render("dashboard", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
 
   // Routing sign up
   app.get("/signup", function (req, res) {
@@ -32,8 +32,8 @@ module.exports = function (app) {
   });
 
   // Routing log out
-  app.get("/", function (req, res) {
-    res.render("logout");
+  app.get("/logout", function (req, res) {
+    res.render("/");
   });
 
   // Render 404 page for any unmatched routes
