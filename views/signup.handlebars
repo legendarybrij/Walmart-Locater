@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+    <!-- Title -->
+    <title>ShopHopping | Grocery Planner and Item Locator</title>
+    <!-- Favicon -->
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+    <!-- CSS -->
+    {{#each css}}
+    <link rel="stylesheet" href="styles/{{this}}">
+    {{/each}}
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    {{{body}}}
+    <!-- Top NavBar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand  mx-auto d-block" href="/">
+            <span><img src="https://i.imgur.com/pED5pcN.png" width="215" height="125" alt="Logo"></span>
+        </a>
+    </nav>
+    <!--/. Top NavBar -->
+
+    <!-- Sign Up Form -->
+    <div class="container col-md-6 shadow-lg p-2 mb-5 mt-5 bg-white rounded">
+        <br>
+        <h1 class="ml-4">Sign up</h1>
+        <br>
+        <form id="signup" name="signup" method="post" action="/signup">
+            <div class="form-group row text-center">
+                <!-- First name -->
+                <label for="firstname" class="col-sm-2 col-form-label"><i class="far fa-address-card"></i></label>
+                <div class="col-sm-9">
+                    <input type="text" name="firstname" class="form-control" id="inputFirstName"
+                        placeholder="First name">
+                </div>
+            </div>
+            <div class="form-group row text-center">
+                <!-- Last name -->
+                <label for="lastname" class="col-sm-2 col-form-label"><i class="fas fa-address-card"></i></label>
+                <div class="col-sm-9">
+                    <input type="text" name="lastname" class="form-control" id="inputLastName" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-group row text-center">
+                <!-- Email -->
+                <label for="email" class="col-sm-2 col-form-label"><i class="fas fa-envelope"></i></label>
+                <div class="col-sm-9">
+                    <input type="email" name="email" class="text form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row text-center">
+                <!-- Password -->
+                <label for="password" class="col-sm-2 col-form-label"><i class="fas fa-lock"></i></label>
+                <div class="col-sm-9">
+                    <input type="password" name="password" class="form-control" id="inputPassword"
+                        placeholder="Password">
+                </div>
+            </div>
+            {{!-- <div class="form-group row"> --}}
+            <!-- Re-enter Password -->
+            {{!-- <label for="password" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password2" name="password" class="form-control" id="inputPassword2"
+                        placeholder="Repeat your password">
+                </div>
+            </div> --}}
+            <!-- Submit Button -->
+            <div class="form-group row mr-5">
+                <div class="col-sm-12 text-right m-2">
+                    <input class="btn btn-warning p-3 rounded" type="submit" style="width:150px;" value="Register" />
+                </div>
+            </div>
+            <!-- Re-route to Sign In -->
+            <div class="form-group row mr-5">
+                <div class="col-sm-12 text-right m-2">
+                    <a href="/signin"><u>I am already a member</u></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Sign Up form -->
+
+    <!-- Link to jQuery, Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,16 +1,16 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "exampledb",
-    "host": "localhost",
+    "password": "chewbacca",
+    "database": "sequelize_passport",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "",
-    "database": "testdb",
-    "host": "localhost",
+    "password": "chewbacca",
+    "database": "sequelize_passport",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": false
   },

@@ -1,2 +1,3 @@
 # Project-2
-Unknown
+
+Grocery Planner and Item Locator
