@@ -17,12 +17,14 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
   padding: 30px;
   text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #152266;
 }
 
 .list-group-item {
@@ -73,7 +75,7 @@ ul, li {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #00B4CC;
+  border: 4px solid #00B4CC;
   border-right: none;
   padding: 5px;
   height: 50px;
@@ -104,4 +106,102 @@ ul, li {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.footer-centered {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font: "Poppins", sans-serif;
+  padding: 20px;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  color: #494845;
+  font-size: 16px;
+  margin: 0;
+  background: #ebebeb;
+}
+
+.footer-centered .footer-links {
+  list-style: none;
+  font-weight: bold;
+  color: #494845;
+  padding: 20px 0 23px;
+  margin: 0;
+  word-spacing: 15px;
+}
+
+.footer-centered .footer-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-text, .footer-text a {
+  color: #494845;
+  font-size: 12px;
+}
+
+/*---- Responsiveness ----*/
+
+@media (max-width: 320px) {
+  .footer-centered {
+    padding: 35px;
+  }
+  .footer-centered {
+    font-size: 18px;
+  }
+  .footer-centered {
+    font-size: 12px;
+  }
+  .footer-centered .footer-links {
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+  .footer-centered .footer-links a {
+    line-height: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-centered {
+    padding: 35px;
+  }
+  .footer-centered {
+    font-size: 18px;
+  }
+  .footer-centered {
+    font-size: 12px;
+  }
+  .footer-centered .footer-links {
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+  .footer-centered .footer-links a {
+    line-height: 3;
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer-centered {
+    padding: 35px;
+  }
+  .footer-centered {
+    font-size: 18px;
+  }
+  .footer-centered {
+    font-size: 12px;
+  }
+  .footer-centered .footer-links {
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+  .footer-centered .footer-links a {
+    line-height: 3;
+  }
 }
