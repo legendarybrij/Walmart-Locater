@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "mynameisb",
+    "password": "",
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "mynameisb",
+    "password": "",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
