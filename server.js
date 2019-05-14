@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var env = require('dotenv');
 var exphbs = require('express-handlebars');
 var path = require('path');
+const cors = require("cors");
 var PORT = process.env.PORT || 8080;
 
 // For BodyParser
@@ -16,6 +17,17 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'secret', resave: true, saveUninitialized: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+//Middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static("public"));
+app.use(cors({
+  'allowedHeaders': ['sessionId', 'Content-Type'],
+  'exposedHeaders': ['sessionId'],
+  'origin': '*',
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': false
+}));
 
 // For Handlebars
 app.engine(
