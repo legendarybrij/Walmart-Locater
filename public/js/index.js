@@ -312,7 +312,7 @@ function searchWalmart(search) {
         imgBox.on("click",function(event){
           $(".pin2").hide();
           var dataID= event.currentTarget.attributes[2].textContent.split("/");
-          console.log(dataID);
+          //console.log(dataID);
           $(".pin1").show();
           for(i in categoryPoint)
           {
@@ -438,7 +438,7 @@ function searchWalmart(search) {
                     
 
                   }
-                  console.log("intimatewear ="+intimatewear);
+                  //console.log("intimatewear ="+intimatewear);
                   if(shoes===true)
                   { 
                     $(".pin1").css({"left": categoryPoint["shoes"]["x"]});
@@ -498,7 +498,7 @@ function searchWalmart(search) {
                     }
 
                   }
-                  console.log("furniture ="+furniture);
+                 // console.log("furniture ="+furniture);
                   if(furniture===true)
                   {
                     $(".pin1").css({"left": categoryPoint["furniture"]["x"]});
@@ -560,7 +560,7 @@ function searchWalmart(search) {
                       }
 
                     }
-                    console.log("pharmacy ="+pharmacy);
+                    //console.log("pharmacy ="+pharmacy);
                     if(pharmacy===true)
                     {
                       $(".pin1").css({"left": categoryPoint["pharmacy"]["x"]});
