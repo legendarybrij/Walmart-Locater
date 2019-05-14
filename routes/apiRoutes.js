@@ -1,4 +1,5 @@
 var db = require("../models");
+var axios = require('axios');
 
 module.exports = function(app) {
   // Get all examples
@@ -21,4 +22,23 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+
+  app.get('/api/test/:queryRequest', (req,res) => {
+    var queryRequest = req.params.queryRequest
+    // console.log(queryRequest)
+    //var queryURL= "https://api.ebay.com/commerce/taxonomy/v1_beta/category_tree/{category_tree_id}/get_category_suggestions?q="+queryRequest;
+    var queryURL = "http://api.walmartlabs.com/v1/search?query="+queryRequest+"&format=json&apiKey=knd7pc96vzfvzjb7h6ywz74x";
+
+    axios.get(queryURL)
+    .then((data) => {
+      res.json(data.data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  })
+
+
+
 };

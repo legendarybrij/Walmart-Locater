@@ -18,6 +18,7 @@ CREATE TABLE users
 
 
 	-- INSERT INTO users (firstname, lastname, username, about, email, password) VALUES('john', 'john', 'john', 'about', 'john@gmail.com', 'john');
-   --  INSERT INTO users (firstname, lastname, username, about, email, password) VALUES('jane', 'jane', 'jane', 'about', 'jane@gmail.com', 'jane');
-
-    SELECT * FROM users;
+    -- INSERT INTO users (firstname, lastname, username, about, email, password) VALUES('jane', 'jane', 'jane', 'about', 'jane@gmail.com', 'jane');
+    
+    -- USE sequelize_passport;
+    -- SELECT * FROM users;
