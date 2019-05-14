@@ -234,11 +234,13 @@ var handleFormSubmit = function(event) {
 // Add event listeners to the submit and delete buttons
 //$submitBtn.on("click", handleFormSubmit);
 //$exampleList.on("click", ".delete", handleDeleteBtnClick);
-$mapdivcordinates.on("click",function(event){
-  searchWalmart();
-  console.log("X = "+event.originalEvent.offsetX +" Y = "+event.originalEvent.offsetY);
+
+// ////TO GET MAP COORDINATES///
+// $mapdivcordinates.on("click",function(event){
+//   console.log("X = "+event.originalEvent.offsetX +" Y = "+event.originalEvent.offsetY);
   
-});
+// });
+// ////TO GET MAP COORDINATES///
 
 function searchWalmart(search) {
 
