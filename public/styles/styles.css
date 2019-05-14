@@ -108,13 +108,14 @@ ul, li {
   overflow-y: scroll;
   width: 200px;
   height: 980px;
+  margin-left: 50px;
   border: 1px solid black;
 }
 
 .map{
   position: static fixed;
   z-index: 0;
-  width:100%;
+  width:50%;
 }
 
 .pin1, .pin2{
