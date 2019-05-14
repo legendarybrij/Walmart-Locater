@@ -1,22 +1,35 @@
-html, body {
+/* html, body {
 height:1900px;;
-}
+} */
 
 .list-group-item {
   line-height: 2.5;
+}
+
+.itemsCol {
+  position: static fixed;
+  z-index: 0;
+  overflow-y: scroll;
+  width: 200px;
+  height: 980px;
+  border: 1px solid black;
 }
 
 .map{
   position: static fixed;
   z-index: 0;
   widows: 100%;
-  
 }
 
-.pin1{
+.pin1, .pin2{
   position: absolute;
   z-index: 1;
   width: 20px;
-  left: 669px; 
-  top: 329px;
+  /* left: 669px; 
+  top: 329px; */
 }
+
+.search1:hover{
+  cursor: pointer;
+}
+
