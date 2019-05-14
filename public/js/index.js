@@ -232,7 +232,7 @@ var handleFormSubmit = function(event) {
 // };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+//$submitBtn.on("click", handleFormSubmit);
 //$exampleList.on("click", ".delete", handleDeleteBtnClick);
 $mapdivcordinates.on("click",function(event){
   searchWalmart();
@@ -240,9 +240,9 @@ $mapdivcordinates.on("click",function(event){
   
 });
 
-function searchWalmart() {
+function searchWalmart(search) {
 
-  $.get("/api/test/canvaspainting", function (data) {
+  $.get("/api/test/"+search, function (data) {
    //console.log(data.items[0].categoryPath);
     //var category=data.items[0].categoryPath.toLowerCase().replace(/\s/g, "").split("/");
     var localCategory="";
@@ -605,11 +605,9 @@ function searchWalmart() {
 
 
 $submitBtn.on("click",function(event){
-var input = $("#searchInput");
+var input = $("#searchInput").val().trim();
 
- console.log(input);
-
-// searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
+searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
 
 });
 
