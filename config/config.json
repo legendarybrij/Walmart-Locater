@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "mynameisb",
     "database": "sequelize_passport",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": "mynameisb",
     "database": "sequelize_passport",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
-    "use_env_variable": "mysql://uio5owhje31odq78:dv1titqwioa7jv76@wiad5ra41q8129zn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/g5ultzoshb3ncgca",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
