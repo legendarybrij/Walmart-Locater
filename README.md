@@ -12,7 +12,7 @@ After finishing sign up, users can sign in here:
 ![Sign in img here](/public/assets/images/signin.png)
 Then, users will be directed to the dashboard page. Users may type the grocery items they want to brought
 ![Dash board page here](/public/assets/images/dashboard.png)
-    SOME PICTURE AND GIF HERE
+
 ## Directory structure
 All the recommended files and directories from the steps above should look like the following structure:
 ```
