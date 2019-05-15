@@ -243,7 +243,7 @@ var handleFormSubmit = function(event) {
 // ////TO GET MAP COORDINATES///
 
 function searchWalmart(search) {
-
+  $items.empty();
   $.get("/api/test/"+search, function (data) {
    //console.log(data.items[0].categoryPath);
     //var category=data.items[0].categoryPath.toLowerCase().replace(/\s/g, "").split("/");
