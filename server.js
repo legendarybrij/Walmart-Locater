@@ -60,7 +60,7 @@ models.sequelize.sync().then(function () {
   console.log(err, "Something went wrong with the Database")
 });
 
-app.listen(8080, function (err) {
+app.listen(PORT, function (err) {
   console.log(
     "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
     PORT,
