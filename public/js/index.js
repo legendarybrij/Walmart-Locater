@@ -206,7 +206,7 @@ function searchWalmart(search) {
         imgBox.on("click",function(event){
           $(".pin2").hide();
           var dataID= event.currentTarget.attributes[2].textContent.split("/");
-          console.log(dataID);
+          //console.log(dataID);
           $(".pin1").show();
           for(i in categoryPoint)
           {
@@ -321,10 +321,9 @@ function searchWalmart(search) {
                       boysclothing =true;
                     }else if(dataID[i]==="girlsclothing" || dataID[i]==="wondernation" || dataID[i]==="wondernationgirls" || dataID[i]==="schooluniforms" || dataID[i]==="babygirlsclothing" ||  dataID[i]==="girls")  
                     {
-                      console.log("girl");
                       girlsclothing =true;
                     }else if(dataID[i]==="sleepwear" || dataID[i]==="womenssleepwear&loungewear" || dataID[i]==="womensnightshirts&gowns" || dataID[i]==="womenspajamas" || dataID[i]==="menssleepwear&robes" || dataID[i]==="mensbig&tallsleepbottoms")  
-                    {console.log("sleepware");
+                    {
                       sleepwear=true;
                     }else if(dataID[i]==="bags&accessories" || dataID[i]==="accessories")  
                     {
