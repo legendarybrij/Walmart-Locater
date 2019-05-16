@@ -126,9 +126,9 @@ var categoryPoint = { "infants&toddler":
 "boyswear":
   {"x":"617px", "y":"442px"},
 "girlswear":
-  {"x":"629px", "y":"474px"},
+  {"x":"709px", "y":"438px"},
 "sleepwear":
-  {"x":"628px", "y":"470px"},
+  {"x":"629px", "y":"474px"},
 "fittingrooms":
   {"x":"678px", "y":"464px"}                   
 };
@@ -206,7 +206,7 @@ function searchWalmart(search) {
         imgBox.on("click",function(event){
           $(".pin2").hide();
           var dataID= event.currentTarget.attributes[2].textContent.split("/");
-          //console.log(dataID);
+          console.log(dataID);
           $(".pin1").show();
           for(i in categoryPoint)
           {
@@ -313,17 +313,18 @@ function searchWalmart(search) {
                     }else if(dataID[i]==="womenslingerie"|| dataID[i]==="womenslingerie&shapewear")
                     {
                       intimatewear =true;
-                    }else if(dataID[i]==="womenstops&t-shirts" || dataID[i]==="womensblouses&shirts" || dataID[i]==="womensactivewear")
+                    }else if(dataID[i]==="womenstops&t-shirts" || dataID[i]==="womensblouses&shirts" || dataID[i]==="womensactivewear" || dataID[i]==="women")
                     {
                       ladieswear =true;
                     }else if(dataID[i]==="boysclothing" || dataID[i]==="boysuniforms")
                     {
                       boysclothing =true;
-                    }else if(dataID[i]==="girlsclothing" || dataID[i]==="wondernation" || dataID[i]==="wondernationgirls" || dataID[i]==="schooluniforms" || dataID[i]==="babygirlsclothing" )  
+                    }else if(dataID[i]==="girlsclothing" || dataID[i]==="wondernation" || dataID[i]==="wondernationgirls" || dataID[i]==="schooluniforms" || dataID[i]==="babygirlsclothing" ||  dataID[i]==="girls")  
                     {
+                      console.log("girl");
                       girlsclothing =true;
                     }else if(dataID[i]==="sleepwear" || dataID[i]==="womenssleepwear&loungewear" || dataID[i]==="womensnightshirts&gowns" || dataID[i]==="womenspajamas" || dataID[i]==="menssleepwear&robes" || dataID[i]==="mensbig&tallsleepbottoms")  
-                    {
+                    {console.log("sleepware");
                       sleepwear=true;
                     }else if(dataID[i]==="bags&accessories" || dataID[i]==="accessories")  
                     {
@@ -505,9 +506,15 @@ function searchWalmart(search) {
 
 
 $submitBtn.on("click",function(event){
-var input = $("#searchInput").val().trim();
 
+var input = $("#searchInput").val().trim();
+if(input==="" || input===undefined)
+{
+  window.alert("Please Enter the Product You Want To Search First In Search Bar");
+
+}else {
 searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
+}
 
 });
 
