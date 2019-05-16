@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <button class="btn my-2 my-sm-0 mr-3" style="color:aliceblue" onclick="location.href='/signin'"><strong>Sign
+                  <button class="btn btn-success my-2 my-sm-0 mr-3" style="color:aliceblue; width:135px" onclick="location.href='/signin'"><strong>Sign
                       in</strong>
                 </li>
               </ul>
@@ -28,7 +28,6 @@
         </nav>
     
         <!--/. Top NavBar -->
-
       <div class="col-md-12">
         <!-- Greetings and Search -->
         <div class="row wrap">
@@ -44,7 +43,37 @@
           </div>
        
         <!--/. Greetings and Search -->
+         
 
+         <!--/. AMENITIES -->
+        <div class="row"> 
+          <div class="col-md-3"></div>
+          <div class=" amenities">
+            <div class="row">
+              
+              <button type="button" class="btn btn-success my-2 my-sm-0 mr-4 title" role="alert" style="color:aliceblue">Click Below on Amenities or Product images to find out the location</button>
+             
+                    <div class="row info">
+                  <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4 infoBut" style="color:aliceblue" id="carts">Carts</button>
+                  <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4 infoBut" style="color:aliceblue" id="washrooms">Washrooms</button>
+                  <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4" style="color:aliceblue" id="lotto">Lotto</button>
+                  <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4 infoBut" style="color:aliceblue" id="medicalcentre">Medical Centre</button>
+                  <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4 infoBut" style="color:aliceblue" id="visioncentre">Vision Centre</button>
+                  </div>
+                   <div class="row amenitiesBelow"> 
+                     <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4 infoBut" style="color:aliceblue" id="customerservice">Customer Service</button>
+                   <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4 infoBut" style="color:aliceblue" id="restaurant">Restaurant</button>
+                 <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4" style="color:aliceblue" id="hairsalon">Hair Salon</button>
+                <button type="button" class="btn btn-warning my-2 my-sm-0 mr-4" style="color:aliceblue" id="nailsalon">Nail Salon</button>
+               
+                
+                </div>  
+            </div>
+          </div>
+        </div>
+        <!--/. AMENITIES -->
+        
+        
         <!-- Map -->
         <div class="row">
               
@@ -53,7 +82,7 @@
                   
                 </div>
               </div>
-              <div class="col-md-9 map">
+              <div class="col-md-9 map" id="route">
               <img src="/assets/images/walmart.png" alt="">
               <div><img src="assets/images/pin.png" class="pin1"></div>
               <div><img src="assets/images/pin.png" class="pin2"></div>

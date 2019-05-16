@@ -49,9 +49,9 @@ var categoryPoint = { "infants&toddler":
   {"x":"286px", "y":"670px"},
 "pharmacy":
   {"x":"356px", "y":"692px"},
-"medical":
+"medicalcentre":
   {"x":"262px", "y":"756px"},
-"visioncenter":
+"visioncentre":
   {"x":"362px", "y":"765px"},
 "cartsleft":
   {"x":"356px", "y":"796px"},
@@ -67,7 +67,7 @@ var categoryPoint = { "infants&toddler":
   {"x":"523px", "y":"737px"},
 "customerservice":
   {"x":"632px", "y":"737px"},
-"mcdonald":
+"restaurant":
   {"x":"702px", "y":"740px"},
 "checkout":
   {"x":"627px", "y":"687px"},
@@ -512,6 +512,7 @@ if(input==="" || input===undefined)
   window.alert("Please Enter the Product You Want To Search First In Search Bar");
 
 }else {
+location.assign("#route");
 searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
 }
 
@@ -529,7 +530,58 @@ function handle(event){
       window.alert("Please Enter the Product You Want To Search First In Search Bar");
     
     }else {
+    location.assign("#route");
     searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
     }
   }
 }
+
+
+
+$("#carts").on("click",function(event){
+  $(".pin2").show();
+  $(".pin1").show();
+  location.assign("#route");
+  
+  $(".pin1").css({"left": categoryPoint["cartsleft"]["x"]});
+  $(".pin1").css({"top": categoryPoint["cartsleft"]["y"]});
+
+  $(".pin2").css({"left": categoryPoint["cartsright"]["x"]});
+  $(".pin2").css({"top": categoryPoint["cartsright"]["y"]});
+});
+
+$("#washrooms").on("click",function(event){
+  $(".pin2").show();
+  $(".pin1").show();
+  location.assign("#route");
+  
+  $(".pin1").css({"left": categoryPoint["washroomtop"]["x"]});
+  $(".pin1").css({"top": categoryPoint["washroomtop"]["y"]});
+
+  $(".pin2").css({"left": categoryPoint["washroombottom"]["x"]});
+  $(".pin2").css({"top": categoryPoint["washroombottom"]["y"]});
+});
+
+
+function locate(go){
+$("#"+go).on("click",function(event){
+  $(".pin1").show();
+  $(".pin2").hide();
+  location.assign("#route");
+  $(".pin1").css({"left": categoryPoint[go]["x"]});
+  $(".pin1").css({"top": categoryPoint[go]["y"]});
+});
+
+}
+
+locate("lotto");
+locate("medicalcentre");
+locate("visioncentre");
+locate("customerservice");
+locate("restaurant");
+locate("hairsalon");
+locate("nailsalon");
+
+
+
+
