@@ -133,6 +133,12 @@ var categoryPoint = { "infants&toddler":
   {"x":"678px", "y":"464px"}                   
 };
 
+////TO GET MAP COORDINATES///
+// $mapdivcordinates.on("click",function(event){
+//   console.log("X = "+event.originalEvent.offsetX +" Y = "+event.originalEvent.offsetY);
+  
+// });
+////TO GET MAP COORDINATES///
 
 function searchWalmart(search) {
   $items.empty();
@@ -200,7 +206,7 @@ function searchWalmart(search) {
         imgBox.on("click",function(event){
           $(".pin2").hide();
           var dataID= event.currentTarget.attributes[2].textContent.split("/");
-          console.log(dataID);
+          //console.log(dataID);
           $(".pin1").show();
           for(i in categoryPoint)
           {

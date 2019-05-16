@@ -88,7 +88,7 @@ ul, li {
   bottom: 0px;
 }
 
-.pin1 {
+.pin1, .pin2 {
   position: absolute;
   z-index: 1;
   width: 20px;
