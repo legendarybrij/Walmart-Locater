@@ -21,4 +21,12 @@ module.exports = function (app, passport) {
             return next();
         res.redirect('/signin');
     }
+
+    exports.signout = function (req, res) {
+
+        req.session.destroy(function (err) {
+            res.redirect('/');
+        });
+     
+     }
 }

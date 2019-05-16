@@ -148,20 +148,20 @@ function searchWalmart(search) {
           
           //console.log(category[0]);
         var imgBox = $("<img>");
-        var name = $("<h4>");
-        var price = $("<h5>");
-        var stock =$("<h5>");
-        var reviews=$("<h5>");
-        $items.addClass("text-center");
+        var name = $("<h6>");
+        var price = $("<h6>");
+        var stock =$("<h6>");
+        var reviews=$("<h6>");
+        $items.addClass("text-center products");
         //Name
         $items.append(name);
         name.text(data.items[i].name);
-        name.addClass("col-md-12");
+        name.addClass("col-md-12 products");
         name.css({"color": "#4171b9"});
         name.css({"font-weight": "bold"});
         //Image
         name.append(imgBox);
-        imgBox.addClass("col-md-12 search1");
+        imgBox.addClass("col-md-12 search1 products");
         imgBox.attr("src",data.items[i].largeImage);
         imgBox.attr("data-id",category);
         
@@ -169,11 +169,12 @@ function searchWalmart(search) {
         //Price
         $items.append(price);
         price.text("Price: $"+data.items[i].salePrice);
-        price.addClass("col-md-12");
+        price.addClass("col-md-12 products");
         price.css({"color": "red"});
         //Stock
         price.append(stock);
         stock.text("Stock: "+data.items[i].stock); 
+        stock.addClass("col-md-12 products");
         stock.css({"color": "#70a959"});
       
         //Customer Reviews

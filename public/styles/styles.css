@@ -14,7 +14,7 @@
 /* =================================== */
 
 body {
-  font-size: 18px;
+  /* font-size: 18px; */
   margin: 0;
   padding: 0;
   height: 100%;
@@ -27,23 +27,6 @@ h1 {
 
 .list-group-item {
   line-height: 2.5;
-}
-
-.map {
-  position: static fixed;
-  z-index: 0;
-  widows: 100%;
-  top: 150px;
-  bottom: 0px;
-  max-width: 100%;
-}
-
-.pin1 {
-  position: absolute;
-  z-index: 1;
-  width: 20px;
-  left: 669px;
-  top: 329px;
 }
 
 /*--------------------------------------------------------------
@@ -98,30 +81,185 @@ ul, li {
   font-size: 20px;
 }
 
+.map {
+  position: static fixed;
+  z-index: 0;
+  top: 150px;
+  bottom: 0px;
+}
+
+.pin1 {
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+}
 
 .itemsCol {
   top: 150px;
   position: static fixed;
   z-index: 0;
   overflow-y: scroll;
-  width: 200px;
   height: 980px;
-  margin-left: 50px;
+  margin-left: 20px;
   border: 1px solid black;
 }
 
-.map{
-  position: static fixed;
-  z-index: 0;
-  width:50%;
-}
-
-.pin1, .pin2{
-  position: absolute;
-  z-index: 1;
-  width: 20px;
+.products {
+padding-left: 0px;
+padding-right: 0px;
 }
 
 .search1:hover{
   cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.bottom {
+  padding-top: 200px;
+}
+.footer-centered {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font: "Poppins", sans-serif;
+  padding: 20px;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  color: #494845;
+  font-size: 16px;
+  margin: 0;
+  background: #ebebeb;
+}
+
+.footer-centered .footer-links {
+  list-style: none;
+  font-weight: bold;
+  color: #494845;
+  padding: 20px 0 23px;
+  margin: 0;
+  word-spacing: 15px;
+}
+
+.footer-centered .footer-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-text, .footer-text a {
+  color: #494845;
+  font-size: 12px;
+}
+
+/*---- Responsiveness ----*/
+
+@media (max-width: 320px) {
+  .footer-centered {
+    padding: 35px;
+  }
+  .footer-centered {
+    font-size: 18px;
+  }
+  .footer-centered {
+    font-size: 12px;
+  }
+  .footer-centered .footer-links {
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+  .footer-centered .footer-links a {
+    line-height: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-centered {
+    padding: 35px;
+  }
+  .footer-centered {
+    font-size: 18px;
+  }
+  .footer-centered {
+    font-size: 12px;
+  }
+  .footer-centered .footer-links {
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+  .footer-centered .footer-links a {
+    line-height: 3;
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer-centered {
+    padding: 35px;
+  }
+  .footer-centered {
+    font-size: 18px;
+  }
+  .footer-centered {
+    font-size: 12px;
+  }
+  .footer-centered .footer-links {
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+  .footer-centered .footer-links a {
+    line-height: 3;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+
+.about {
+  padding: 25px;
+}
+
+.mission,
+.team,
+.process {
+  padding: 20px;
+  margin: 15px;
+}
+
+h2, h5 {
+  padding: 25px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.underline {
+  border-bottom: 3px wavy #fdd53e;
+  padding: 3px;
+}
+
+.underline-title {
+  border-bottom: 3px solid #fdd53e;
+  border-bottom-width: 5px;
+}
+
+.fas,
+.far {
+  color: #667ce0;
+  border: solid 1px;
+  padding: 5px;
+}
+
+.prototype {
+  float: left;
+  width: 33.33%;
+  padding: 25px;
+}
+
+/* Clearfix (clear floats) */
+.prototype::after {
+  clear: both;
+  display: table;
 }

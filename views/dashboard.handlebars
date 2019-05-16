@@ -1,3 +1,4 @@
+<div id="home">
 <!-- Top NavBar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
     <a class="navbar-brand mr-auto d-block ml-5" href="/">
@@ -16,30 +17,58 @@
 </nav>
 <!--/. Top NavBar -->
 
-<!-- Greetings and Search -->
-<div class="wrap">
-  <h1>Welcome Shop-hoppers!</h1>
-    <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
-  </div>
-</div>
-<!--/. Greetings and Search -->
+  <!-- Greetings and Search -->
+        <div class="row wrap">
+              <h1 class="col-md-12 text-center">Welcome Shop-hoppers!</h1>
+              <div class="col-md-2"></div>
+                <div class="col-md-8 search">
+                  <input type="text" class="searchTerm" id="searchInput" placeholder="What are you looking for?">
+                  <button type="button" class="searchButton" id="submitInput">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+                <div class="col-md-2"></div>
+          </div>
+       
+        <!--/. Greetings and Search -->
 
-<!-- Map -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-9 map fixed">
-      <img src="/assets/images/walmart.png" alt="">
-      <div><img src="assets/images/pin.png" class="pin1"></div>
-    </div>
-  </div>
+        <!-- Map -->
+        <div class="row">
+              
+              <div class="col-md-2 itemsCol">
+                <div class="items">
+                  
+                </div>
+              </div>
+              <div class="col-md-9 map">
+              <img src="/assets/images/walmart.png" alt="">
+              <div><img src="assets/images/pin.png" class="pin1"></div>
+              <div><img src="assets/images/pin.png" class="pin2"></div>
+              </div>
+              
+              
+        </div>
+        <!--/. Map -->
+        <div class="row">
+          <!-- Footer -->
+        <div class="col-md-12 bottom">
+          <footer class="footer-centered navbar-fixed-bottom">
+              <p class="footer-links">
+                  <a href="/">Home </a><span style="color:#6dabe4"> ·</span>
+                  <a href="/about">About</a>
+              </p>
+              <div class="footer-text">
+                  Copyright &copy;
+                  <script>document.write(new Date().getFullYear());</script> ShopHopping by Grocery 4 Less. All rights
+                  reserved.</span><br>
+                  <span>Made with <i class="fas fa-heart" aria-hidden="true"> + Grit </i> for U of T Coding Bootcamp in Toronto, Canada.</span>
+              </div>
+          </footer>
+        </div>
+      </div>
+          <!--/. Footer -->
+    {{!-- </div> --}}
 </div>
-<!--/. Map -->
-
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
