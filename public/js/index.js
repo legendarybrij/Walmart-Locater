@@ -518,3 +518,18 @@ searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
 });
 
 
+document.addEventListener('keypress', handle);
+
+function handle(event){
+  //console.log(event);
+  if(event.charCode === 13){
+    var input = $("#searchInput").val().trim();
+    if(input==="" || input===undefined)
+    {
+      window.alert("Please Enter the Product You Want To Search First In Search Bar");
+    
+    }else {
+    searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
+    }
+  }
+}

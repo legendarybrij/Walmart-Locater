@@ -1,7 +1,5 @@
 <!-- Top NavBar -->
-
-  {{!-- <div class="container"> --}}
-    
+<div id="home">  
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
           <a class="navbar-brand mr-auto d-block ml-5" href="/">
             <img src="https://i.imgur.com/pED5pcN.png" width="215" height="125" alt="Logo">
@@ -30,15 +28,14 @@
         </nav>
     
         <!--/. Top NavBar -->
-<div id="home">
-  <div class="row">
+
       <div class="col-md-12">
         <!-- Greetings and Search -->
         <div class="row wrap">
               <h1 class="col-md-12 text-center">Welcome Shop-hoppers!</h1>
               <div class="col-md-2"></div>
                 <div class="col-md-8 search">
-                  <input type="text" class="searchTerm" id="searchInput" placeholder="What are you looking for?">
+                  <input type="text" class="searchTerm" id="searchInput" placeholder="What are you looking for?" onkeypress="handle">
                   <button type="button" class="searchButton" id="submitInput">
                     <i class="fa fa-search"></i>
                   </button>
@@ -84,7 +81,7 @@
       </div>
           <!--/. Footer -->
     </div>
-</div>
+
 </div>
     
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
