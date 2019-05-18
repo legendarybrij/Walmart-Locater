@@ -28,12 +28,7 @@ module.exports = function(app) {
     var queryRequest = req.params.queryRequest
     // console.log(queryRequest)
     //var queryURL= "https://api.ebay.com/commerce/taxonomy/v1_beta/category_tree/{category_tree_id}/get_category_suggestions?q="+queryRequest;
-    //Over Limit
-    //var queryURL = "http://api.walmartlabs.com/v1/search?query="+queryRequest+"&format=json&apiKey=knd7pc96vzfvzjb7h6ywz74x";
-    //b32svt79yejm43tr4p3uup9m  
-
-    //Active
-    //rn2herp8jzd8c6raptxmjtzx
+    
     var queryURL = "http://api.walmartlabs.com/v1/search?query="+queryRequest+"&format=json&apiKey=bxktfmp48ryvgntbpwx3ybcz";
 
     axios.get(queryURL)
