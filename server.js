@@ -29,6 +29,8 @@ app.use(cors({
   'preflightContinue': false
 }));
 
+//app.use(env);
+
 // For Handlebars
 app.engine(
   "handlebars",

@@ -1,5 +1,8 @@
 var db = require("../models");
 var axios = require('axios');
+require("dotenv").config();
+var keys = require("../keys");
+var walmart = keys.walmart;
 
 module.exports = function(app) {
   // Get all examples
@@ -29,7 +32,7 @@ module.exports = function(app) {
     // console.log(queryRequest)
     //var queryURL= "https://api.ebay.com/commerce/taxonomy/v1_beta/category_tree/{category_tree_id}/get_category_suggestions?q="+queryRequest;
     
-    var queryURL = "http://api.walmartlabs.com/v1/search?query="+queryRequest+"&format=json&apiKey=bxktfmp48ryvgntbpwx3ybcz";
+    var queryURL = "http://api.walmartlabs.com/v1/search?query="+queryRequest+"&format=json&apiKey="+walmart.id;
 
     axios.get(queryURL)
     .then((data) => {

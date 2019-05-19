@@ -1,7 +1,3 @@
-// require("dotenv").config();
-// var keys = require("./keys.js");
-// var walmart = new Walmart(keys.walmart);
-
 // Get references to page elements
 $(".pin2").hide();
 $(".pin1").hide();
