@@ -93,4 +93,5 @@ All the recommended files and directories from the steps above should look like 
 5. Incorporate Authentication (JSON Web Tokens, Sessions, Etc)
 6. Use an existing public dataset to power the database
 Create a migration strategy
+---------------------------
 <sub> &copy; May 2019: Kathy, Kai-Ann, Brij and Paul </sub>
