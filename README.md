@@ -84,7 +84,7 @@ All the recommended files and directories from the steps above should look like 
 2. PathFinder + browserify: 
    **Possible Approach**
    1) create the grid;
-   2) overlap the grid with the floor plan 
+ updat  2) overlap the grid with the floor plan 
    3) create database for the floor plan
    4) mark different section of the listed categories in the floor plan
    5) deploy pathfinder
@@ -93,4 +93,6 @@ All the recommended files and directories from the steps above should look like 
 5. Incorporate Authentication (JSON Web Tokens, Sessions, Etc)
 6. Use an existing public dataset to power the database
 Create a migration strategy
+
+----------
 <sub> &copy; May 2019: Kathy, Kai-Ann, Brij and Paul </sub>
