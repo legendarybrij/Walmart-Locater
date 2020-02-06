@@ -37,6 +37,7 @@ module.exports = function(app) {
     axios.get(queryURL)
     .then((data) => {
       res.json(data.data)
+      console.log(data.data);
     })
     .catch((err) => {
       console.log(err)

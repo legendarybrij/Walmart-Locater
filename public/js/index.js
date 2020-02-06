@@ -202,26 +202,26 @@ function searchWalmart(search) {
         imgBox.on("click",function(event){
           $(".pin2").hide();
           var dataID= event.currentTarget.attributes[2].textContent.split("/");
-          //console.log(dataID);
+          console.log(dataID);
           $(".pin1").show();
           for(i in categoryPoint)
           {
-                if(i===dataID[0]) 
+                if(i===dataID[1]) 
                 { //console.log(categoryPoint[i]["x"]);
                   $(".pin1").css({"left": categoryPoint[i]["x"]});
                   $(".pin1").css({"top": categoryPoint[i]["y"]});
-                }else if(dataID[0]==="arts,crafts&sewing" || dataID[0]==="arts" || dataID[0]==="arts&crafts"){
+                }else if(dataID[1]==="arts,crafts&sewing" || dataID[1]==="arts" || dataID[1]==="arts&crafts"){
                   $(".pin2").show();
                   $(".pin1").css({"left": categoryPoint["crafts&fabricsleft"]["x"]});
                   $(".pin1").css({"top": categoryPoint["crafts&fabricsleft"]["y"]});
 
                   $(".pin2").css({"left": categoryPoint["crafts&fabricsright"]["x"]});
                   $(".pin2").css({"top": categoryPoint["crafts&fabricsright"]["y"]});
-                }else if(dataID[0]==="animalother" || dataID[0]==="animalaccessories" || dataID[0]==="animalfood" || dataID[0]==="animalhealth&grooming")
+                }else if(dataID[1]==="animalother" || dataID[1]==="animalaccessories" || dataID[1]==="animalfood" || dataID[1]==="animalhealth&grooming")
                 {
                   $(".pin1").css({"left": categoryPoint["pets"]["x"]});
                   $(".pin1").css({"top": categoryPoint["pets"]["y"]});
-                }else if(dataID[0]==="food" || dataID[0]==="food&beverages" || dataID[0]==="householdessentials")
+                }else if(dataID[1]==="food" || dataID[1]==="food&beverages" || dataID[1]==="householdessentials")
                 { 
                   var dairy = false; var frozen =false; meat=false; produce=false; bakery=false; deli=false; var papergood=false;
                   for(var i =0; i<dataID.length;i++)
@@ -284,15 +284,15 @@ function searchWalmart(search) {
                     $(".pin1").css({"top": categoryPoint["grocery"]["y"]});
                   }
                 
-                }else if(dataID[0]==="babydiapering,care,&other" || dataID[0]==="baby" || dataID[0]==="babyclothing" || dataID[0]==="babyfood" || dataID[0]==="babyfurniture" || dataID[0]==="babytoys" || dataID[0]==="babytransport" ) 
+                }else if(dataID[1]==="babydiapering,care,&other" || dataID[1]==="baby" || dataID[1]==="babyclothing" || dataID[1]==="babyfood" || dataID[1]==="babyfurniture" || dataID[1]==="babytoys" || dataID[1]==="babytransport" ) 
                 {
                   $(".pin1").css({"left": categoryPoint["infants&toddler"]["x"]});
                   $(".pin1").css({"top": categoryPoint["infants&toddler"]["y"]});
-                }else if(dataID[0]==="electronicsother" || dataID[0]==="cellphones" || dataID[0]==="computercomponents" || dataID[0]==="computers" || dataID[0]==="electronicsaccessories" || dataID[0]==="electronicscables" || dataID[0]==="printers,scanners,&imaging" || dataID[0]==="software" || dataID[0]==="tv's&videodisplays"|| dataID[0]==="videogames"|| dataID[0]==="videoprojectors" || dataID[0]==="movies&tvshows")
+                }else if(dataID[1]==="electronicsother" || dataID[1]==="cellphones" || dataID[1]==="computercomponents" || dataID[1]==="computers" || dataID[1]==="electronicsaccessories" || dataID[1]==="electronicscables" || dataID[1]==="printers,scanners,&imaging" || dataID[1]==="software" || dataID[1]==="tv's&videodisplays"|| dataID[1]==="videogames"|| dataID[1]==="videoprojectors" || dataID[1]==="movies&tvshows")
                 {
                   $(".pin1").css({"left": categoryPoint["electronics"]["x"]});
                   $(".pin1").css({"top": categoryPoint["electronics"]["y"]});
-                }else if(dataID[0]==="clothing")
+                }else if(dataID[1]==="clothing")
                 { 
                   var shoes = false; hosiery=false; menswear=false; intimatewear=false; var ladieswear=false; var boysclothing=false; girlsclothing=false; sleepwear=false;  accessories=false;
                   for(var i =0; i<dataID.length;i++)
@@ -309,13 +309,13 @@ function searchWalmart(search) {
                     }else if(dataID[i]==="womenslingerie"|| dataID[i]==="womenslingerie&shapewear")
                     {
                       intimatewear =true;
-                    }else if(dataID[i]==="womenstops&t-shirts" || dataID[i]==="womensblouses&shirts" || dataID[i]==="womensactivewear" || dataID[i]==="women")
+                    }else if(dataID[i]==="womenstops&t-shirts" || dataID[i]==="womensblouses&shirts" || dataID[i]==="womensactivewear" || dataID[i]==="women" || dataID[i]==="womensplus")
                     {
                       ladieswear =true;
-                    }else if(dataID[i]==="boysclothing" || dataID[i]==="boysuniforms")
+                    }else if(dataID[i]==="boysclothing" || dataID[i]==="boysschooluniformstore" || dataID[i]==="babyboysclothing")
                     {
                       boysclothing =true;
-                    }else if(dataID[i]==="girlsclothing" || dataID[i]==="wondernation" || dataID[i]==="wondernationgirls" || dataID[i]==="schooluniforms" || dataID[i]==="babygirlsclothing" ||  dataID[i]==="girls")  
+                    }else if(dataID[i]==="girlsclothing" || dataID[i]==="wondernation" || dataID[i]==="wondernationgirls" || dataID[i]==="girlsschooluniformstore" || dataID[i]==="babygirlsclothing" ||  dataID[i]==="girls")  
                     {
                       girlsclothing =true;
                     }else if(dataID[i]==="sleepwear" || dataID[i]==="womenssleepwear&loungewear" || dataID[i]==="womensnightshirts&gowns" || dataID[i]==="womenspajamas" || dataID[i]==="menssleepwear&robes" || dataID[i]==="mensbig&tallsleepbottoms")  
@@ -374,7 +374,7 @@ function searchWalmart(search) {
                     $(".pin1").css({"left": categoryPoint["accessories"]["x"]});
                     $(".pin1").css({"top": categoryPoint["accessories"]["y"]});
                   }                  
-                }else if(dataID[0]==="home" || dataID[0]==="shopbybrand")
+                }else if(dataID[1]==="home" || dataID[1]==="shopbybrand")
                 {
                   var furniture = false; var kidsfurniture = false; var kitchen=false; 
                   for(var i =0; i<dataID.length;i++)
@@ -402,27 +402,27 @@ function searchWalmart(search) {
                     $(".pin1").css({"left": categoryPoint["domestics"]["x"]});
                     $(".pin1").css({"top": categoryPoint["domestics"]["y"]});
                   }
-                }else if(dataID[0]==="jewelry")
+                }else if(dataID[1]==="jewelry")
                 {
                   $(".pin1").css({"left": categoryPoint["jewelry"]["x"]});
                   $(".pin1").css({"top": categoryPoint["jewelry"]["y"]});
-                }else if(dataID[0]==="books")
+                }else if(dataID[1]==="books")
                 {
                   $(".pin1").css({"left": categoryPoint["books&magazines"]["x"]});
                   $(".pin1").css({"top": categoryPoint["books&magazines"]["y"]});
-                }else if(dataID[0]==="musicalinstruments")
+                }else if(dataID[1]==="musicalinstruments")
                 {
                   $(".pin1").css({"left": categoryPoint["sportinggoods"]["x"]});
                   $(".pin1").css({"top": categoryPoint["sportinggoods"]["y"]});
-                }else if(dataID[0]==="officesupplies" || dataID[0]==="office" || dataID[0]==="walmartforbusiness")
+                }else if(dataID[1]==="officesupplies" || dataID[1]==="office" || dataID[1]==="walmartforbusiness")
                 {
                   $(".pin1").css({"left": categoryPoint["stationary"]["x"]});
                   $(".pin1").css({"top": categoryPoint["stationary"]["y"]});
-                }else if(dataID[0]==="photocenter")
+                }else if(dataID[1]==="photocenter")
                 {
                   $(".pin1").css({"left": categoryPoint["photocentre"]["x"]});
                   $(".pin1").css({"top": categoryPoint["photocentre"]["y"]});
-                }else if(dataID[0]==="seasonal" || dataID[0]==="party&occasions")
+                }else if(dataID[1]==="seasonal" || dataID[1]==="party&occasions")
                 {
                     $(".pin2").show();
                     $(".pin1").css({"left": categoryPoint["seasonalright"]["x"]});
@@ -430,14 +430,14 @@ function searchWalmart(search) {
 
                     $(".pin2").css({"left": categoryPoint["seasonalleft"]["x"]});
                     $(".pin2").css({"top": categoryPoint["seasonalleft"]["y"]});
-                }else if(dataID[0]==="patio&garden")
+                }else if(dataID[1]==="patio&garden")
                 { $(".pin2").show();
                 $(".pin1").css({"left": categoryPoint["gardencenterleft"]["x"]});
                 $(".pin1").css({"top": categoryPoint["gardencenterleft"]["y"]});
 
                 $(".pin2").css({"left": categoryPoint["gardencenterbottom"]["x"]});
                 $(".pin2").css({"top": categoryPoint["gardencenterbottom"]["y"]});
-                } else if(dataID[0]==="personalcare" || dataID[0]==="health" || dataID[0]==="industrial&scientific" || dataID[0]==="beauty")
+                } else if(dataID[1]==="personalcare" || dataID[1]==="health" || dataID[1]==="industrial&scientific" || dataID[1]==="beauty")
                 { 
                       
 
@@ -462,23 +462,23 @@ function searchWalmart(search) {
                     }
                   
                 }
-                else if(dataID[0]==="homeimprovement")
+                else if(dataID[1]==="homeimprovement")
                 { 
                   $(".pin1").css({"left": categoryPoint["hardware"]["x"]});
                   $(".pin1").css({"top": categoryPoint["hardware"]["y"]});
-                }else if(dataID[0]==="gifts&registry")
+                }else if(dataID[1]==="gifts&registry")
                 {
                   $(".pin1").css({"left": categoryPoint["checkout"]["x"]});
                   $(".pin1").css({"top": categoryPoint["checkout"]["y"]});
-                }else if(dataID[0]==="toys")
+                }else if(dataID[1]==="toys")
                 {
                   $(".pin1").css({"left": categoryPoint["toys"]["x"]});
                   $(".pin1").css({"top": categoryPoint["toys"]["y"]});
-                }else if(dataID[0]==="auto&tires")
+                }else if(dataID[1]==="auto&tires")
                 { 
                   $(".pin1").css({"left": categoryPoint["automotive"]["x"]});
                   $(".pin1").css({"top": categoryPoint["automotive"]["y"]});
-                }else if(dataID[0]==="sports&outdoors")
+                }else if(dataID[1]==="sports&outdoors")
                 { 
                   $(".pin1").css({"left": categoryPoint["sportinggoods"]["x"]});
                   $(".pin1").css({"top": categoryPoint["sportinggoods"]["y"]});
@@ -510,6 +510,7 @@ if(input==="" || input===undefined)
 }else {
 location.assign("#route");
 searchWalmart(input.toLowerCase().replace(/\s/g, "+"));
+console.log(searchWalmart(input.toLowerCase().replace(/\s/g, "+")));
 }
 
 });
