@@ -312,7 +312,7 @@ function searchWalmart(search) {
                     }else if(dataID[i]==="womenstops&t-shirts" || dataID[i]==="womensblouses&shirts" || dataID[i]==="womensactivewear" || dataID[i]==="women" || dataID[i]==="womensplus")
                     {
                       ladieswear =true;
-                    }else if(dataID[i]==="boysclothing" || dataID[i]==="boysschooluniformstore" || dataID[i]==="babyboysclothing")
+                    }else if(dataID[i]==="boysclothing" || dataID[i]==="boysschooluniformstore" || dataID[i]==="boysuniformstore" || dataID[i]==="babyboysclothing")
                     {
                       boysclothing =true;
                     }else if(dataID[i]==="girlsclothing" || dataID[i]==="wondernation" || dataID[i]==="wondernationgirls" || dataID[i]==="girlsschooluniformstore" || dataID[i]==="babygirlsclothing" ||  dataID[i]==="girls")  
