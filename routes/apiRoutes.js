@@ -29,7 +29,7 @@ module.exports = function(app) {
 
   app.get('/api/test/:queryRequest', (req,res) => {
     var queryRequest = req.params.queryRequest
-    // console.log(queryRequest)
+    //console.log(queryRequest)
     //var queryURL= "https://api.ebay.com/commerce/taxonomy/v1_beta/category_tree/{category_tree_id}/get_category_suggestions?q="+queryRequest;
     
     var queryURL = "http://api.walmartlabs.com/v1/search?query="+queryRequest+"&format=json&apiKey="+walmart.id;
